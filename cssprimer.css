@@ -2,7 +2,7 @@
 body 
 {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f7f6;
+    background-color: #dbfff7;
     color: #333;
     line-height: 1.6;
     margin: 0;
@@ -210,3 +210,4 @@ nav a:hover {
 .slider-button.next {
     right: 15px;
 }
+
