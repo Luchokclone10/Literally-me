@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Царёв Илья - Персональная страница</title>
     <link rel="stylesheet" href="cssprimer.css">
+    <style>
+        html 
+        {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
 
@@ -17,6 +23,13 @@
                 В настоящее время изучаю HTML, CSS, Python и C++, чтобы создавать 10/10 игры и рабочие веб-приложения.
             </p>
         </header>
+
+        <nav>
+            <a href="#about">Обо мне</a>
+            <a href="#interests">Интересы</a>
+            <a href="#portfolio">Уроки жизни</a>
+            <a href="#contact">Контакты</a>
+        </nav>
 
         <main>
             <section id="about">
@@ -37,6 +50,28 @@
                     <li><strong>Мултипликация:</strong> Смотрю различные аниме и мультсералы в свободное время.</li>
                 </ul>
             </section>
+            
+            <section id="portfolio">
+                <h2>Уроки жизни</h2>
+                <div class="slider-container">
+                    <div class="slider">
+                        <img src="Images/all.jpg" alt="Картина маслом">
+                        <img src="Images/1.png" alt="Урок жизни 1">
+                        <img src="Images/2.png" alt="Урок жизни 2">
+                        <img src="Images/3.png" alt="Урок жизни 3">
+                        <img src="Images/4.png" alt="Урок жизни 4">
+                        <img src="Images/5.png" alt="Урок жизни 5">
+                        <img src="Images/6.png" alt="Урок жизни 6">
+                        <img src="Images/7.png" alt="Урок жизни 7">
+                        <img src="Images/8.png" alt="Урок жизни 8">
+                        <img src="Images/9.png" alt="Урок жизни 9">
+                        <img src="Images/10.png" alt="Урок жизни 10">
+                        <img src="Images/11.png" alt="Урок жизни 11">
+                    </div>
+                    <button class="slider-button prev">&#10094;</button>
+                    <button class="slider-button next">&#10095;</button>
+                </div>
+            </section>
 
             <section id="contact">
                 <h2>Контакты</h2>
@@ -52,6 +87,32 @@
             <p>Меня зовут Лин Линь, и я обычный человек.</p>
         </footer>
     </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slider img');
+        const prevButton = document.querySelector('.slider-button.prev');
+        const nextButton = document.querySelector('.slider-button.next');
+
+        let currentIndex = 0;
+
+        function updateSlider() 
+        {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        nextButton.addEventListener
+        ('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+        });
+
+        prevButton.addEventListener
+        ('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+        });
+    </script>
 
 </body>
 </html>
