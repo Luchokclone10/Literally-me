@@ -127,4 +127,86 @@ footer
     margin-top: 40px;
     font-size: 0.9em;
     color: #dbdbdb6b;
+
+}
+
+/* --- Навигация --- */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #3498db;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* --- Слайдер --- */
+.slider-container 
+{
+    position: relative;
+    max-width: 700px;
+    margin: 20px auto;
+    overflow: hidden; /* Скрывает изображения, которые выходят за пределы контейнера */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.slider 
+{
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Анимация прокрутки */
+}
+
+.slider img {
+    width: 100%;
+    flex-shrink: 0; /* Гарантирует, что изображения не будут сжиматься */
+    display: block;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(44, 62, 80, 0.6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.slider-button:hover {
+    background-color: #2c3e50;
+}
+
+.slider-button.prev {
+    left: 15px;
+}
+
+.slider-button.next {
+    right: 15px;
 }
